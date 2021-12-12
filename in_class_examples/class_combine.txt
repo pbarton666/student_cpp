@@ -1,0 +1,45 @@
+Why you need header files when combining files
+
+C++ allows only a single definition of an entity.   Declarations can be wherever they are
+needed, and repeated as necessary.  Thats because the definition gets linked into the compiled
+code and it would wreak havoc if there were multiple, different versions.  That's the "one definition
+rule" (applies to types as well as variables).
+
+
+
+Headers versus Implementation
+
+Header files contain declarations.   These are sparse statements of the class names
+and requirements.   Declarations can occur anywhere, and multiple times.  Theseh
+are the .h or .hpp files.  Declarations are also called 'prototypes'.
+
+Source files contain definitions.   These contain the actual code that implements the 
+class.   A code block that implements a class also declares it.  These are the .cpp files.
+The header files are incorporated via #include directives.  Definitions are also called
+'implementations'.
+
+When you compile, you need to know about the class definitions, types of objects in play,
+size of the objects, inheritance, etc.  The compiler needs to allocte memory.  You only compiler
+one file at a time.
+
+The next step, linking, brings in the implementations.
+
+Include statements
+
+#include <string> is used for implementation-level headers.  The string between the <> gets
+replaced with a header from outside - generally from the default C++ directory.
+
+#include "class9a_combine.hpp"  is used for user files.  The string between the "" gets
+replaced with the contents of that file - generally from the current directory, but that can 
+get overriden by the '-L dirpath' compile directive.
+
+Header files
+
+Header files containe bare-bones specifications like this:
+    class FloatRoutines{
+        public:
+            FloatRoutines();
+            float addFloats();
+    };
+
+The class and method names are exposed, along with the datatype or the return.

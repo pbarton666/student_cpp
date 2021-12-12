@@ -3,21 +3,13 @@
 // https://www.cplusplus.com/reference/random/poisson_distribution/
 // https://www.cplusplus.com/reference/random/poisson_distribution/operator()/
 
+using namespace std;
 #include <iostream>
 #include <random>
 #include <cassert>
 #include <deque>
 #include <algorithm>  //methods like find() operate on ranges of element
 #include <string>
-
-using std::cin;
-using std::cout;
-using std::endl;
-using std::string;
-using std::deque;
-using std::ostream;
-using std::ostream_iterator;
-using std::to_string;
 
 int main()
 {   

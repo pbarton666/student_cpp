@@ -4,13 +4,7 @@
 #include <algorithm>  //methods like find() operate on ranges of element
 #include <string>
 
-using std::cin;
-using std::cout;
-using std::endl;
-using std::string;
-using std::deque;
-using std::ostream;
-using std::ostream_iterator;
+using namespace std;
 
 void deque_create(){
 
@@ -18,16 +12,15 @@ void deque_create(){
     int x[5] = {1, 2, 3, 4, 5};
     // Syntax:  deque<data_type> name(start_address, end_address)
     deque<int> deque1(&x[0], &x[5]);
-
 }
 
 void deque_methods(){
 
-    int x[5] = {1, 4, 8, 10, 12};
-    deque<int> deque1(&x[0], &x[5]);
+    int x[5] = {1, 4, 8, 10, 12};   // create an array
+    deque<int> deque1(&x[0], &x[5]);  // assign syntax:   (first address, last address)
 
     // locate index position of an object (fail)
-    int find_this = 3;
+    int find_this = 3;   // there's no 3!
     deque<int>::iterator pos = find(deque1.begin(), deque1.end(), find_this);
     cout << "Looking for " << find_this << " located: " << *pos << endl;
 
@@ -35,6 +28,21 @@ void deque_methods(){
     int find_this1 = 12;
     deque<int>::iterator pos1 = find(deque1.begin(), deque1.end(), find_this1);
     cout << "Looking for " << find_this1 << " located: " << *pos1 << endl;
+
+    // create the queue directly:
+    deque<int> y = {201, 202, 203, 204, 205};
+    for (int i=0; i<y.size(); i++)
+        cout<<y[i] << "\t";
+    cout << endl;
+
+    // replace some elements with values from x using an iterator
+    deque<int>::iterator deque1_iter;
+    deque1_iter = deque1.begin() + 1;
+    y.assign(deque1_iter, deque1.end() - 1);
+    for (int i=0; i<y.size(); i++)
+        cout<<y[i] << "\t";
+    cout << endl;
+
 }
 
 void dq_add_front_back(){
@@ -77,7 +85,7 @@ void dq_add_front_back(){
 }
 
 int main(){
-    //deque_create();
-    //deque_methods();
-    dq_add_front_back();
+    deque_create();
+    deque_methods();
+    //dq_add_front_back();
 }

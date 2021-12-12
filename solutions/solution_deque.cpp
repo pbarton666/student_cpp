@@ -19,24 +19,19 @@ int main ()
 
     
     for(const auto& element: first) {
-        std::cout << element << "\t";
+        cout << element << "\t";
         }
         cout << endl << "Size of first: " << int (first.size()) << endl << endl;
 
     for(const auto& element: second) {
-        std::cout << element << "\t";
+        cout << element << "\t";
         }
         cout << endl << "Size of second " << int (second.size()) << endl << endl;
 
     for(const auto& element: third) {
-        std::cout << element << "\t";
+        cout << element << "\t";
         }
         cout << endl << "Size of third: " << int (third.size()) << endl;
-
-
-
-
-
 
   return 0;
 }
