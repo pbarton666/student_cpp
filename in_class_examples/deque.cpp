@@ -1,3 +1,5 @@
+
+
 #include <iostream>
 #include <cassert>
 #include <deque>
@@ -21,12 +23,18 @@ void deque_methods(){
 
     // locate index position of an object (fail)
     int find_this = 3;   // there's no 3!
-    deque<int>::iterator pos = find(deque1.begin(), deque1.end(), find_this);
+    deque<int>::iterator pos = find(deque1.begin(), 
+                                deque1.end(), 
+                                find_this);
+    
     cout << "Looking for " << find_this << " located: " << *pos << endl;
 
     // success
     int find_this1 = 12;
-    deque<int>::iterator pos1 = find(deque1.begin(), deque1.end(), find_this1);
+    deque<int>::iterator pos1 = find(deque1.begin(), 
+                                    deque1.end(), 
+                                    find_this1);
+
     cout << "Looking for " << find_this1 << " located: " << *pos1 << endl;
 
     // create the queue directly:
@@ -78,7 +86,9 @@ void dq_add_front_back(){
     cout << "\nRemoving from front:  \n";
     for (int i=0; i<dqs.size()+1 ; i++){
         dqs.pop_front();
-        copy (dqs.begin(), dqs.end(), ostream_iterator<string>(cout, "\t")); cout << endl;
+        copy (dqs.begin(), dqs.end(), 
+        ostream_iterator<string>(cout, "\t")); 
+        cout << endl;
 
     }
 
@@ -87,5 +97,5 @@ void dq_add_front_back(){
 int main(){
     deque_create();
     deque_methods();
-    //dq_add_front_back();
+    dq_add_front_back();
 }

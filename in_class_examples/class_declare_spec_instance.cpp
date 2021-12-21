@@ -7,6 +7,7 @@ class Dog;     // declaration  - no memory specified
 class Dog{};    // definition - allocaets memory
 Dog myDog;     // instansiation - creates usable object
 
-void main(){
+int main(){
     cout << "main() was here";
+    return 0;
 }

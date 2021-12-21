@@ -14,7 +14,7 @@ class GoatClass{
 
     public:
         // method (public)
-        void say_hi(){
+        void say_hi(){  
             cout << "Hi.  My name is " + name + ", a " + color + " goat." << endl;
         }
 
@@ -52,7 +52,7 @@ int main(){
     GoatClass myBrownGoat;
     GoatClass myWhiteGoat;
 
-    myBrownGoat.setName("Truffle");
+    myBrownGoat.setName("Truffle"); //.name  || complex.real()
     myBrownGoat.setColor("brown");
     myWhiteGoat.setName("Merangue");
     myWhiteGoat.setColor("white");

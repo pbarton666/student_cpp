@@ -18,7 +18,7 @@ void i_report(vector<int> vec){
     }   cout << endl;
 }
 
-void main(){
+int main(){
     vector<string> employees;
 
     // one way to get values in:
@@ -58,4 +58,5 @@ void main(){
     cout << "size:  " << employees.size() << endl;
     cout << "second element: " << employees.at(1) << endl;
     cout << endl;
+    return 0;
 } 

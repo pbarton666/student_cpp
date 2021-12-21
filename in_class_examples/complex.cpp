@@ -39,8 +39,9 @@ void myComplex(){
 
     // lots more like polar, pow, sqrt, sin, etc.
 }
-void main(){
+int main(){
 
     myTypedef();
     myComplex();
+    return 0;
 }

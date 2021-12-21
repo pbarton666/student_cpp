@@ -44,7 +44,7 @@ void examineStdArr(array<int, 3> arr){
 
 }
 
-void main(){
+int main(){
     int arr[] = {1, 8, 4};
     cout << "From main" << endl;
     cout << "We have a C-type array" << endl;
@@ -56,6 +56,8 @@ void main(){
     examineArr(arr);
     array<int,3> stdarr {1, 8, 4};
     examineStdArr(stdarr);
+
+    return 0;
     
 }
 

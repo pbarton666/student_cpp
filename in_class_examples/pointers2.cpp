@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void main(){
+int main(){
     // show off some pointer tricks
 
     int integer;
@@ -60,6 +60,7 @@ void main(){
     // parallel index and ponter operations
     cout << "The last red bottle as red[2]  " << red[2] << endl;
     cout << "The last red bottle via pointer " << *(red +2) << endl;
+    return 0;
 
 
 }

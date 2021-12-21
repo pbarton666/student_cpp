@@ -31,11 +31,15 @@ int exploreFile(){
         // Write a few lines.   Fp positions move. 
         cout << "\nWriting lines\n";
         myfile << "first line\nsecond line\nthird line\n";
+        
+        cout << "****************************" << endl;
         printFileInfo(myfile);
 
         cout << "\nResetting file pointer...\n";
         myfile.seekg(0);
-    
+        printFileInfo(myfile);
+        myfile.seekp(5);
+        printFileInfo(myfile);
         cout << "\nReading file contents:\n";
         while (getline (myfile, line)) {    
                 cout << line << '\n';

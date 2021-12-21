@@ -1,6 +1,7 @@
 // hello2_anno.cpp
 
-#include <iostream>    // supports I/O operations   
+#include <iostream>    // supports I/O operations  
+#include <string> 
 
 using namespace std;   // imports whole standard library (not recommended)
 
@@ -14,6 +15,8 @@ int main()
     std::string resp = "Awesome";
 
     // concatenation of string objects, sent to cout
-    std::cout << "I'm deligheted that you're " + resp + "!";
+    std::cout << "I'm delighted that you're " + resp + "!";
+    cout << "Say hey " << to_string(123);
+    
     return 0;
 }

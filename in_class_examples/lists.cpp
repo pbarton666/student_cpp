@@ -10,7 +10,7 @@
 #include <iostream>
 #include <list>
 #include <vector>
-#include <algorithm>
+//#include <algorithm>
 #include <string>
 
 using namespace std;
@@ -152,10 +152,18 @@ void sortList(){
     }
 
     dogs.sort();
-    cout << "" << "\nContents sorted: "; p = dogs.begin(); while(p != dogs.end()) { cout << *p << " ";  p++; }
+    cout << "" << "\nContents sorted: "; 
+        p = dogs.begin(); 
+        while(p != dogs.end()) { 
+            cout << *p << " ";  p++; 
+            }
 
     dogs_copy.reverse();
-    cout << "" << "\nContents reversed: "; p = dogs_copy.begin(); while(p != dogs_copy.end()) { cout << *p << " ";  p++; }
+    cout << "" << "\nContents reversed: "; 
+        p = dogs_copy.begin(); 
+        while(p != dogs_copy.end()) { 
+            cout << *p << " ";  p++; 
+            }
 }
 int main(){
     makeList();       

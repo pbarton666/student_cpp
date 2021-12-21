@@ -18,7 +18,7 @@ void fun2(int a, int b, float c){
     cout << "fun2 reporting.";
 }
 
-void main(){
+int main(){
     // pointer declarations are a little funky - you have to declare them with the
     //    entire signature of the function
    string (*fun_ptr)(int) = &fun;   // parens force order of operations - parens trump *
@@ -29,4 +29,5 @@ void main(){
    
    void (*fun_ptr2)(int, int, float) = &fun2;   // parens force order of operations - parens trump *
    (*fun_ptr2)(555, 777, 12.34);
+    return 0;
 }

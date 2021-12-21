@@ -24,11 +24,11 @@ class DogClass: public MammalClass{
         const int leg_count = 4;   // all dogs will have 4 legs
         int loyalty_score_ = 10;   // assumed loyalty is 10, but could change 
         string dog_name_;     // dogs will get names, but we don't know what they are yet
-
+        // getReal()  .real    real()
         void setName(string name){ dog_name_ = name; }
         string dog_name() const {return dog_name_;}
         void setLoyaltyScore(int loyalty){ loyalty_score_ = loyalty; }
-        int loyalty_score() const {return loyalty_score_;}
+        int loyalty_score() const {return loyalty_score_;}  //getVariable()
     };
 
 class HuskyClass: public DogClass{

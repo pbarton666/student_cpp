@@ -7,7 +7,7 @@ using namespace std;
 int CORRECT = 20;
 
 int tester(int guess){
-    try {
+    try {//200 / guess
         if (guess == CORRECT) {
             cout << "You guessed the correct answer: " << guess;
             cout << " Yay!" << endl;

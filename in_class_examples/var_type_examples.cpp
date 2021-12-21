@@ -5,10 +5,10 @@ using namespace std;
 
 int main(){
     int mybin;
-    mybin = 0x231;
+    mybin = 0b111;
     cout << mybin <<endl;
 
-    int myhex = 0b1111111;   //
+    int myhex = 0x112311111;   //
     cout << myhex << endl;
 
     unsigned short int myshort = 34u;  

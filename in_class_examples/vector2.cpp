@@ -23,7 +23,7 @@ Type report ( Type x )
 
 
 
-void main(){
+int main(){
 
     //review (vector1.cpp)
     vector<string> employees;
@@ -50,7 +50,7 @@ void main(){
     cout << "size:  " << employees.size() << endl;
     cout << endl;
 
-//  This ns new material
+//  This is new material
 // =================================
     // Add multiple elements with constructor.  
     //Syntax:
@@ -94,7 +94,12 @@ void main(){
     // insert a standard array into a vector
     int myarray [] = { 501,502,503 };
     // Syntax:
-    // .insert ( <position>, <size>, <value>    )    // inserts at beginning
+    // .insert ( <position>, <begin_donor>, <end_donor>    )    // inserts at beginning
     ivector.insert (ivector.begin(), myarray, myarray+3);
     report(ivector);
+    cout << "myarray:  " << myarray << endl;
+    cout << "myarray + 3 :  " << myarray+3 << endl;
+    cout << "myarray + 2 :  " << myarray+2 << endl;
+    cout << *ivector.begin();
+    return 0;
 }
